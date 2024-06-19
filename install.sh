@@ -30,7 +30,7 @@ else
    	else
   	echo "Are you sure you want to install ArchPulse to $ROOTARCHPULSE? This is irreversible! (Type Y and press enter to confirm, press enter to cancel)"
    	read CONFIRM
-   	if [ $CONFIRM == "Y"
+   	if [ $CONFIRM == "Y" ]
     then
 	echo "Making Filesystems!"
 	mkfs.ext4 $ROOTARCHPULSE
