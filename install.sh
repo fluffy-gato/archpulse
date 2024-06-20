@@ -28,7 +28,7 @@ else
  	then
   	echo "You have not set your username! (password will be set later)"
    	else
-  	echo "Are you sure you want to install Totoro Linux to $ROOTPULSE? This is irreversible! (Type Y and press enter to confirm, press enter to cancel)"
+  	echo "Are you sure you want to install ArchPulse Linux to $ROOTPULSE? This is irreversible! (Type Y and press enter to confirm, press enter to cancel)"
    	read CONFIRM
    	if [ $CONFIRM == "Y" ]
     then
