@@ -1,5 +1,8 @@
 clear
-echo "Installing Arch Linux using the ArchPulse installation script (08.2024)"
+echo "This script installs Arch Linux to your computer with the Budgie Desktop, after the installation a .txt file teaching you to use some linux commands should appear on the desktop."
+sleep 10
+clear
+echo "Installing Arch Linux"
 sleep 2
 clear
 lsblk
