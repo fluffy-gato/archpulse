@@ -27,9 +27,9 @@ elif [ -z "$BOOTPULSE" ]; then
 elif [ -z "$USER" ]; then
   echo "You have not set your USERNAME! (password will be set later)"
 else
-  echo "Are you sure you want to install Arch Linux to $ROOTPULSE? This is irreversible! (Type Y and press enter to confirm, press enter to cancel)"
+  echo "Are you sure you want to install Arch Linux to $ROOTPULSE? This is irreversible! (Type Yes and press enter to confirm, press enter to cancel)"
   read CONFIRM
-  if [ "$CONFIRM" == "Y" ]; then
+  if [ "$CONFIRM" == "Yes" ]; then
     clear
     echo "DESTROYING OLD GPT"
     dd if=/dev/zero of=$DISK bs=512M status=progress count=1
@@ -68,12 +68,12 @@ else
     mkdir /mnt/home/$USER
     arch-chroot /mnt chown -R $USER:$USER /home/$USER
     arch-chroot /mnt usermod -a -G wheel $USER
-    wget https://raw.githubusercontent.com/trurune/totoro-linux/master/sudoers
+    wget https://raw.githubusercontent.com/fluffy-gato/archpulse/main/sudoers
     cat sudoers > /mnt/etc/sudoers
     echo "Done!"
     clear
-    echo "Installing Budgie Desktop Environment!"
-    arch-chroot /mnt pacman -S budgie-desktop networkmanager firefox mate-terminal lightdm  --noconfirm
+    echo "Installing Budgie!"
+    arch-chroot /mnt pacman -S budgie-desktop networkmanager firefox mate-terminal xorg --noconfirm
     echo "Done!"
     
     echo "Installing GRUB bootloader"
