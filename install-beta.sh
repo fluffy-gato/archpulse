@@ -1,5 +1,5 @@
 clear
-echo "This script installs Arch Linux to your computer with the Budgie Desktop, after the installation a .txt file teaching you to use some linux commands should appear on the desktop."
+echo "This script installs Arch Linux to your computer with the Budgie Desktop."
 sleep 10
 clear
 echo "Installing Arch Linux"
